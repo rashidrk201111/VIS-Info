@@ -1,0 +1,7 @@
+{
+  "name": "Voter Information System (VIS)",
+  "description": "A comprehensive platform to process voter lists from PDF/Images, store electoral data locally, and search for voter details in a professional slip format.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
