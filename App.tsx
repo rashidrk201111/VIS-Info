@@ -163,7 +163,7 @@ const App: React.FC = () => {
              <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></div>
              <p className="text-[10px] text-slate-400 font-black uppercase tracking-[0.2em]">Real-Time Cloud PostgreSQL Connection</p>
           </div>
-          <p className="text-xs text-slate-300 font-medium">Data is stored securely in your Supabase project: xdrmvswdwhjewemgwtof</p>
+          <p className="text-xs text-slate-300 font-medium">Data is stored securely in your Supabase database</p>
         </div>
       </footer>
     </div>

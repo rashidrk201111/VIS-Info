@@ -2,14 +2,13 @@
 import { createClient } from '@supabase/supabase-js';
 import { VoterRecord } from './types';
 
-/**
- * SUPABASE CONFIGURATION
- * Connected to Project: xdrmvswdwhjewemgwtof
- */
-const SUPABASE_URL = 'https://xdrmvswdwhjewemgwtof.supabase.co';
-const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inhkcm12c3dkd2hqZXdlbWd3dG9mIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjgyMjE0MTcsImV4cCI6MjA4Mzc5NzQxN30.WHmBrLBUHT1Lt-BSyd4Ni9cbJmF3f2sCiOwwX-HVEdk';
+const SUPABASE_URL = import.meta.env.VITE_SUPABASE_URL;
+const SUPABASE_ANON_KEY = import.meta.env.VITE_SUPABASE_ANON_KEY;
 
-// Initialize the Supabase Client
+if (!SUPABASE_URL || !SUPABASE_ANON_KEY) {
+  throw new Error('Missing Supabase environment variables. Please check your .env file.');
+}
+
 const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
 const TABLE_NAME = 'voters_table';
